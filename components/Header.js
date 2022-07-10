@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { Button, Input } from 'reactstrap';
+import classNames from 'classNames'
 
 import Search from './Search'
 
@@ -49,15 +51,18 @@ const Header = () => {
         </Link>
       </li>
       <li>
-        <Link href="/sign-in">
-        <div className={styles.button}>Prisijungti</div>
+        <Link href="/sign-in" passHref>
+          <>
+            <Button className={classNames("btn btn-xs", styles.button)}>
+            Prisijungti
+          </Button>
+          </>
         </Link>
       </li>
     </div>
     <div className='socialIcons'>
     <div className="search">
-    <Search />
-
+      <Input placeholder="search" className={styles.search}/>
     </div>
 
       <a href="https://instagram.com">

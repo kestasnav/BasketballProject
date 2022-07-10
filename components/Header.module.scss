@@ -36,10 +36,13 @@ $buttonColor: #A52A2A;
 
 .button {
   background-color: $buttonColor;
-  padding: 15px;
 
   &:hover {
     cursor: pointer;
     background-color: lighten($buttonColor, 30%);
   }
+}
+
+.search {
+  border-radius: 15px;
 }
