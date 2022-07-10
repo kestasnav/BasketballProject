@@ -1,0 +1,45 @@
+$buttonColor: #A52A2A;
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    background-color: chartreuse;
+}
+
+.span {
+    font-size: 2rem;
+}
+
+.navIcons {
+    grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.navbarLinks {
+    grid-area: 1 / 2 / 2 / 4;
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialIcons {
+    grid-area: 1 / 5 / 2 / 6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  background-color: $buttonColor;
+  padding: 15px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($buttonColor, 30%);
+  }
+}
